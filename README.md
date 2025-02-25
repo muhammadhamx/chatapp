@@ -39,3 +39,67 @@ Before running the app, ensure you have the following installed:
 ```bash
 git clone https://github.com/muhammadhamx/chat-app.git
 cd chat-app
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Set Up Firebase
+
+1. Go to the [Firebase Console](https://console.firebase.google.com/).
+2. Create a new project (e.g., ChatApp).
+3. Register a web app and copy the Firebase configuration.
+4. Open `src/environments/environment.ts` and replace the placeholder values with your Firebase config:
+
+```typescript
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID",
+  },
+};
+```
+
+5. Enable Firebase Realtime Database in test mode (for development purposes).
+
+### 4. Run the App
+
+```bash
+ng serve
+```
+
+Open your browser and navigate to [http://localhost:4200](http://localhost:4200).
+
+---
+
+## Live Demo
+
+Check out the live demo of the app: **[Chat App Live Demo](#)** (Update with the actual link when deployed.)
+
+---
+
+## Contributing
+
+Contributions are welcome! If you find any issues or want to add new features, feel free to open a pull request.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+
+---
+
+## Acknowledgments
+
+- **Angular** for the frontend framework.
+- **Firebase** for realtime database and hosting.
+
