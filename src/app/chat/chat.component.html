@@ -1,0 +1,22 @@
+<div class="chat-container">
+    <div class="chat-header">
+        <h1 class="chat-title">Chat Room</h1>
+        <button (click)="logout()" class="logout-button">Log Out</button>
+    </div>
+    <div class="chat-messages">
+        @for (message of messages; track $index) {
+        <div class="message">
+            <div class="message-header">
+                <span class="message-user">{{ message.userName }}</span>
+                <span class="message-time">{{ message.timeStamp }}</span>
+            </div>
+            <div class="message-body">{{ message.messageBody }}</div>
+        </div>
+        }
+    </div>
+    <div class="chat-input-container">
+        <input [(ngModel)]="newMessage" placeholder="Type a message..." class="chat-input"
+            (keyup.enter)="sendMessage()" />
+        <button (click)="sendMessage()" class="send-button">Send</button>
+    </div>
+</div>
