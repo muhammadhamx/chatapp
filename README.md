@@ -82,7 +82,7 @@ Open your browser and navigate to [http://localhost:4200](http://localhost:4200)
 
 ## Live Demo
 
-Check out the live demo of the app: **[Chat App Live Demo](#)** (https://chatapp-gray-five.vercel.app/)
+Check out the live demo of the app: **[Chat App Live Demo](https://chatapp-gray-five.vercel.app/)** 
 
 ---
 
