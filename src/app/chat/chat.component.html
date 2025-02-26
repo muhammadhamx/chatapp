@@ -8,7 +8,7 @@
         <div class="message">
             <div class="message-header">
                 <span class="message-user">{{ message.userName }}</span>
-                <span class="message-time">{{ message.timeStamp }}</span>
+                <span class="message-time">{{ message.timeStamp | date: 'short' }}</span>
             </div>
             <div class="message-body">{{ message.messageBody }}</div>
         </div>
