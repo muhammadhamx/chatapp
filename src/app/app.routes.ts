@@ -9,5 +9,5 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'chat', component: ChatComponent },
     { path: 'admin', component: TestingComponent },
-    { path: 'privateChat/:senderId/:receiverId', component: PrivateComponent },
+    // { path: 'privateChat/:senderId/:receiverId', component: PrivateComponent },
 ];
