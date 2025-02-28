@@ -23,6 +23,7 @@ export class ChatComponent implements OnInit {
       this.user = JSON.parse(savedUser);
       this.chatService.getMessages().subscribe((messages) => {
         this.messages = messages;
+
       });
     } else {
       this.router.navigate(['/login']);
@@ -36,8 +37,14 @@ export class ChatComponent implements OnInit {
     }
   }
 
+  privateChat(receiver: any) {
+    if (this.user) {
+      this.router.navigate(['/privateChat', this.user.userId, receiver.userId], { queryParams: { sender: this.user.userName, receiver: receiver.userName } });
+    }
+  }
+
   logout() {
-    localStorage.removeItem('chatUser');
+    // localStorage.removeItem('chatUser');
     this.router.navigate(['/login']);
   }
 }

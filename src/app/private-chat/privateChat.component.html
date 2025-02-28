@@ -1,15 +1,15 @@
 <div class="chat-container">
     <div class="chat-header">
         <h1 class="chat-title">Chat Room</h1>
-        <button (click)="logout()" class="logout-button">Log Out</button>
+        <button (click)="Back()" class="logout-button">Back</button>
+
     </div>
     <div class="chat-messages">
         @for (message of messages; track $index) {
-        <div class="message" (click)="privateChat(message.userId)">
+        <div class="message">
             <div class="message-header">
-                <span class="message-user">{{ message.userName }}</span>
+                <span class="message-user">{{ message.senderName }}</span>
                 <span class="message-time">{{ message.timeStamp | date: 'short' }}</span>
-                <button (click)="privateChat(message)">click me</button>
             </div>
             <div class="message-body">{{ message.messageBody }}</div>
         </div>
